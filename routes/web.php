@@ -4,6 +4,8 @@ use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\Course\CourseController;
 use Illuminate\Support\Facades\Route;
 
+Route::get("/", [UserController::class, "index"])->name("/");
+
 Route::prefix("user")->group(function () {
     Route::get("/", [UserController::class, "index"])->name("user./");
     Route::get("add-user", [UserController::class, "add"])->name("user.add");

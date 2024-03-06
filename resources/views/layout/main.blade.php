@@ -37,18 +37,23 @@
     <!-- Sidebar menu-->
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
     <aside class="app-sidebar">
-        <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="/images/hay.jpg" width="50px"
+        <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/1200px-User-avatar.svg.png" width="50px"
                 alt="User Image">
             <div>
-                <p class="app-sidebar__user-name"><b>Võ Trường</b></p>
+                <p class="app-sidebar__user-name"><b>Văn Đoàn</b></p>
                 <p class="app-sidebar__user-designation">Chào mừng bạn trở lại</p>
             </div>
         </div>
         <hr>
         <ul class="app-menu">
             <li>
-                <a class="app-menu__item" href="#"><i class='app-menu__icon bx bx-user-voice'></i>
+                <a class="app-menu__item" href="{{route('user./')}}"><i class='app-menu__icon bx bx-user-voice'></i>
                     <span class="app-menu__label">Quản lý khách hàng</span>
+                </a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="{{route('course./')}}"><i class='app-menu__icon bx bx-user-voice'></i>
+                    <span class="app-menu__label">Quản lý khoá học</span>
                 </a>
             </li>
         </ul>
