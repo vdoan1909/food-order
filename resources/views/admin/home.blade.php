@@ -1,6 +1,5 @@
 @extends('layout.admin.index')
 @section('content')
-    <main class="app-content">
         <div class="row">
             <div class="col-md-12">
                 <div class="app-title">
