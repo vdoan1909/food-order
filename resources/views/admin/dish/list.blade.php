@@ -60,7 +60,11 @@
                                         {{ $dish->luot_xem }}
                                     </td>
                                     <td>
-                                        {{ $dish->ten_danh_muc }}
+                                        @foreach ($list_ctg as $ctg)
+                                            @if ($ctg->id == $dish->id_the_loai)
+                                                {{ $ctg->ten_danh_muc }}
+                                            @endif
+                                        @endforeach
                                     </td>
                                     <td>
                                         {{ $dish->ngay_them }}

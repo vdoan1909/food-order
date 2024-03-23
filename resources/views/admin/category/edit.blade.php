@@ -10,6 +10,7 @@
         <div class="col-md-12">
             <form class="tile" action="{{ route('admin.category.edit') }}" method="post" novalidate>
                 @csrf
+                @method("PUT")
                 <h3 class="tile-title">Sửa danh mục</h3>
 
                 <div class="tile-body">

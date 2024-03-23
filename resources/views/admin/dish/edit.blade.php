@@ -8,16 +8,18 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form class="tile" action="{{ route('admin.dish.store') }}" method="post" enctype="multipart/form-data"
+            <form class="tile" action="{{ route('admin.dish.edit') }}" method="post" enctype="multipart/form-data"
                 novalidate>
                 @csrf
+                @method("PUT")
                 <h3 class="tile-title">Tạo mới món ăn</h3>
 
                 <div class="tile-body">
                     <div class="row">
                         <div class="form-group col-md-4">
                             <label class="control-label">Tên món ăn</label>
-                            <input class="form-control" type="text" name="dish_name" value="{{old('dish_name') ?? $dish_detail->ten_mon_an}}">
+                            <input class="form-control" type="text" name="dish_name"
+                                value="{{ old('dish_name') ?? $dish_detail->ten_mon_an }}">
                             @error('dish_name')
                                 <span style="color: red">{{ $message }}</span>
                             @enderror
@@ -25,7 +27,8 @@
 
                         <div class="form-group col-md-4">
                             <label class="control-label">Giá món ăn</label>
-                            <input class="form-control" type="text" name="dish_price">
+                            <input class="form-control" type="text" name="dish_price"
+                                value="{{ old('dish_name') ?? $dish_detail->gia_mon_an }}">
                             @error('dish_price')
                                 <span style="color: red">{{ $message }}</span>
                             @enderror
@@ -41,7 +44,8 @@
 
                         <div class="form-group col-md-4">
                             <label class="control-label">Mô tả</label>
-                            <input class="form-control" type="text" name="dish_des">
+                            <input class="form-control" type="text" name="dish_des"
+                                value="{{ old('dish_des') ?? $dish_detail->mo_ta }}">
                             @error('dish_des')
                                 <span style="color: red">{{ $message }}</span>
                             @enderror
@@ -50,16 +54,21 @@
                         <div class="form-group col-md-4">
                             <label class="control-label">Thể loại</label>
                             <select class="form-control" name="dish_ctg">
-                                <option value="">-- Chọn thể loại --</option>
                                 @foreach ($list_ctg as $ctg)
-                                    <option value="{{$ctg->id}}">
-                                        {{$ctg->ten_danh_muc}}
+                                    <option value="{{ $ctg->id }}" @if ($ctg->id == $dish_detail->id_the_loai) selected @endif>
+                                        {{ $ctg->ten_danh_muc }}
                                     </option>
                                 @endforeach
                             </select>
                             @error('dish_ctg')
                                 <span style="color: red">{{ $message }}</span>
                             @enderror
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <img style="object-fit: cover" width="100" height="100"
+                                src="{{ asset('storage/' . $dish_detail->anh_mon_an) }}"
+                                alt="{{ $dish_detail->ten_mon_an }}">
                         </div>
                     </div>
                 </div>

@@ -23,7 +23,7 @@
     function confirmDelete(id, deleteRoute) {
         swal({
                 title: "Cảnh báo",
-                text: "Bạn có chắc chắn muốn xóa danh mục này?",
+                text: "Bạn có chắc chắn muốn xóa không?",
                 icon: "warning",
                 buttons: ["Hủy bỏ", "Đồng ý"],
                 dangerMode: true,
@@ -33,7 +33,7 @@
                     setTimeout(function() {
                         swal({
                             title: "Thành công",
-                            text: "Danh mục đã được xóa thành công!",
+                            text: "Xóa thành công!",
                             icon: "success",
                             button: "Đóng",
                         });
