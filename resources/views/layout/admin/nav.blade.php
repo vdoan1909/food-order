@@ -24,9 +24,21 @@
              </a>
          </li>
          <li>
+             <a class="app-menu__item " href="{{route('admin.new-ctg')}}">
+                 <i class='app-menu__icon bx bx-list-minus'></i>
+                 <span class="app-menu__label">Danh mục tin tức</span>
+             </a>
+         </li>
+         <li>
              <a class="app-menu__item " href="{{route('admin.dish')}}">
                  <i class='app-menu__icon bx bxs-dish'></i>
                  <span class="app-menu__label">Quản lý món ăn</span>
+             </a>
+         </li>
+         <li>
+             <a class="app-menu__item " href="{{route('admin.news')}}">
+                <i class='app-menu__icon bx bx-news'></i>
+                 <span class="app-menu__label">Quản lý tin tức</span>
              </a>
          </li>
      </ul>
