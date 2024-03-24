@@ -1,13 +1,6 @@
    @include('layout.client.header')
-   <!--=============================
-        BANNER START
-    ==============================-->
-    @yield('banner')
-   <!--=============================
-        BANNER END
-    ==============================-->
 
-   <!-- CART POPUT START -->
+   @yield('banner')
    <div class="cart_popup">
        <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
            <div class="modal-dialog modal-dialog-centered">
@@ -33,8 +26,8 @@
                            <div class="details_size">
                                <h5>select size</h5>
                                <div class="form-check">
-                                   <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                       id="large" checked>
+                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="large"
+                                       checked>
                                    <label class="form-check-label" for="large">
                                        large <span>+ $350</span>
                                    </label>
@@ -91,16 +84,9 @@
            </div>
        </div>
    </div>
-   <!-- CART POPUT END -->
 
-   <!--=============================
-        MENU ITEM START
-    ==============================-->
    @yield('content')
-   <!--=============================
-        MENU ITEM END
-    ==============================-->
 
-    @yield('subcontent')
+   @yield('subcontent')
 
    @include('layout.client.footer')

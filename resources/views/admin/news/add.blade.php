@@ -13,6 +13,8 @@
                 @csrf
                 <h3 class="tile-title">Tạo mới tin tức</h3>
 
+                <a href="{{ url()->previous() }}" class="btn btn-save btn-sm"><i class="fas fa-chevron-left"></i> Quay lại</a>
+                
                 <div class="tile-body">
                     <div class="row">
                         <div class="form-group col-md-3">

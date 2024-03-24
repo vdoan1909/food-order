@@ -6,24 +6,20 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
     <title>RegFood || Restaurant HTML Template</title>
-    <link rel="icon" type="image/png" href="{{asset('client/images/favicon.png')}}">
-    <link rel="stylesheet" href="{{ asset('client/css/all.min.css') }}?ver={{rand()}}">
-    <link rel="stylesheet" href="{{ asset('client/css/bootstrap.min.css') }}?ver={{rand()}}">
-    <link rel="stylesheet" href="{{ asset('client/css/slick.css') }}?ver={{rand()}}">
-    <link rel="stylesheet" href="{{ asset('client/css/nice-select.css') }}?ver={{rand()}}">
-    <link rel="stylesheet" href="{{ asset('client/css/custom_spacing.css') }}?ver={{rand()}}">
-    <link rel="stylesheet" href="{{ asset('client/css/venobox.min.css') }}?ver={{rand()}}">
-    <link rel="stylesheet" href="{{ asset('client/css/animate.css') }}?ver={{rand()}}">
-    <link rel="stylesheet" href="{{ asset('client/css/jquery.exzoom.css') }}?ver={{rand()}}">
-    <link rel="stylesheet" href="{{ asset('client/css/style.css') }}?ver={{rand()}}">
-    <link rel="stylesheet" href="{{ asset('client/css/responsive.css') }}?ver={{rand()}}">
+    <link rel="icon" type="image/png" href="{{ asset('client/images/favicon.png') }}">
+    <link rel="stylesheet" href="{{ asset('client/css/all.min.css') }}?ver={{ rand() }}">
+    <link rel="stylesheet" href="{{ asset('client/css/bootstrap.min.css') }}?ver={{ rand() }}">
+    <link rel="stylesheet" href="{{ asset('client/css/slick.css') }}?ver={{ rand() }}">
+    <link rel="stylesheet" href="{{ asset('client/css/nice-select.css') }}?ver={{ rand() }}">
+    <link rel="stylesheet" href="{{ asset('client/css/custom_spacing.css') }}?ver={{ rand() }}">
+    <link rel="stylesheet" href="{{ asset('client/css/venobox.min.css') }}?ver={{ rand() }}">
+    <link rel="stylesheet" href="{{ asset('client/css/animate.css') }}?ver={{ rand() }}">
+    <link rel="stylesheet" href="{{ asset('client/css/jquery.exzoom.css') }}?ver={{ rand() }}">
+    <link rel="stylesheet" href="{{ asset('client/css/style.css') }}?ver={{ rand() }}">
+    <link rel="stylesheet" href="{{ asset('client/css/responsive.css') }}?ver={{ rand() }}">
 </head>
 
 <body>
-
-    <!--=============================
-        TOPBAR START
-    ==============================-->
     <section class="topbar">
         <div class="container">
             <div class="row">
@@ -46,18 +42,11 @@
             </div>
         </div>
     </section>
-    <!--=============================
-        TOPBAR END
-    ==============================-->
 
-
-    <!--=============================
-        MENU START
-    ==============================-->
     <nav class="navbar navbar-expand-lg main_menu">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="{{asset('client/images/logo.png')}}" alt="RegFood" class="img-fluid">
+                <img src="{{ asset('client/images/logo.png') }}" alt="RegFood" class="img-fluid">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -115,6 +104,3 @@
             </div>
         </div>
     </nav>
-    <!--=============================
-        MENU END
-    ==============================-->
