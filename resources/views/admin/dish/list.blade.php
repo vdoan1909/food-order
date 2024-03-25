@@ -29,7 +29,7 @@
                                 <th>Lượt xem</th>
                                 <th>Thể loại</th>
                                 <th>Ngày thêm</th>
-                                <th width="120">Chức năng</th>
+                                <th width="50">Chức năng</th>
                             </tr>
                         </thead>
 
@@ -70,14 +70,17 @@
                                         {{ $dish->ngay_them }}
                                     </td>
                                     <td>
+                                        <a href="#" class="btn btn-add btn-sm trash" type="button" title="Thêm"><i
+                                                class="fas fa-plus"></i>
+                                        </a>
+                                        <a style="width: 31px" href="{{ route('admin.dish.detail', ['id' => $dish->id]) }}"
+                                            class="btn btn-primary btn-sm edit" title="Sửa">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
                                         <a href="#" class="btn btn-primary btn-sm trash"
                                             onclick="confirmDelete({{ $dish->id }}, '{{ route('admin.dish.delete', ['id' => $dish->id]) }}')"
                                             title="Xóa">
                                             <i class="fas fa-trash-alt"></i>
-                                        </a>
-                                        <a href="{{ route('admin.dish.detail', ['id' => $dish->id]) }}"
-                                            class="btn btn-primary btn-sm edit" title="Sửa">
-                                            <i class="fas fa-edit"></i>
                                         </a>
                                     </td>
                                 </tr>

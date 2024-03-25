@@ -136,7 +136,8 @@ class DishController extends Controller
         }
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
         $is_delete = Dish::findOrFail($id)->delete();
 
         if ($is_delete) {

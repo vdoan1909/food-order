@@ -34,6 +34,12 @@
             </a>
         </li>
         <li>
+            <a class="app-menu__item " href="{{ route('admin.side-dish') }}">
+                <i class='app-menu__icon bx bx-dish'></i>
+                <span class="app-menu__label">Quản lý món phụ</span>
+            </a>
+        </li>
+        <li>
             <a class="app-menu__item " href="{{ route('admin.news') }}">
                 <i class='app-menu__icon bx bx-news'></i>
                 <span class="app-menu__label">Quản lý tin tức</span>

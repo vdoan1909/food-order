@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DishController;
 use App\Http\Controllers\NewsCategoryController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\SideDishController;
 use Illuminate\Support\Facades\Route;
 
 // Admin
@@ -39,4 +40,12 @@ Route::prefix("admin")->group(function () {
     Route::get("news-detail/{id}", [NewsController::class, "detail"])->name("admin.news.detail");
     Route::put("post-edit-news", [NewsController::class, "edit"])->name("admin.news.edit");
     Route::get("delete-news/{id}", [NewsController::class, "delete"])->name("admin.news.delete");
+
+    // Admin side dish
+    Route::get("side-dish", [SideDishController::class, "index"])->name("admin.side-dish");
+    Route::get("add-side-dish", [SideDishController::class, "add"])->name("admin.side-dish.add");
+    Route::post("post-add-side-dish", [SideDishController::class, "store"])->name("admin.side-dish.store");
+    Route::get("side-dish-detail/{id}", [SideDishController::class, "detail"])->name("admin.side-dish.detail");
+    Route::put("post-edit-side-dish", [SideDishController::class, "edit"])->name("admin.side-dish.edit");
+    Route::get("delete-side-dish/{id}", [SideDishController::class, "delete"])->name("admin.side-dish.delete");
 });
