@@ -1251,7 +1251,7 @@ button {
     padding-bottom: 25px;
 }
 
-.menu_filter button {
+.menu_filter a {
     padding: 5px 25px;
     text-transform: capitalize;
     color: var(--colorPrimary);
@@ -1272,8 +1272,8 @@ button {
     -o-border-radius: 4px;
 }
 
-.menu_filter button:hover,
-.menu_filter button.active {
+.menu_filter a:hover,
+.menu_filter a.active {
     background: var(--colorPrimary);
     color: var(--colorWhite);
 }

@@ -44,7 +44,7 @@
                                             alt="{{ $side_dish->ten_mon_phu }}">
                                     </td>
                                     <td>
-                                        {{ $side_dish->gia_mon_phu }}
+                                        {{ number_format($side_dish->gia_mon_phu, 0, '.', '.') }} VND
                                     </td>
                                     <td>
                                         <a href="#" class="btn btn-primary btn-sm trash"

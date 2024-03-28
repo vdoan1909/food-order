@@ -43,7 +43,7 @@
                                         {{ $dish->ten_mon_an }}
                                     </td>
                                     <td>
-                                        {{ number_format($dish->gia_mon_an, 0, '.', '.') }}
+                                        {{ number_format($dish->gia_mon_an, 0, '.', '.') }} VND
                                     </td>
                                     <td>
                                         <img style="object-fit: cover" width="100" height="100"

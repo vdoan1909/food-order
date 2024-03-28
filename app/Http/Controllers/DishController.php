@@ -146,4 +146,10 @@ class DishController extends Controller
             return redirect()->route("admin.dish")->with("error", "Xoá món ăn thất bại");
         }
     }
+
+    public function getDishInfo(Request $request)
+    {
+        $dish = Dish::find($request->id);
+        return response()->json($dish);
+    }
 }

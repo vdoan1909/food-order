@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DishController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\NewsCategoryController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SideDishController;
@@ -48,4 +50,11 @@ Route::prefix("admin")->group(function () {
     Route::get("side-dish-detail/{id}", [SideDishController::class, "detail"])->name("admin.side-dish.detail");
     Route::put("post-edit-side-dish", [SideDishController::class, "edit"])->name("admin.side-dish.edit");
     Route::get("delete-side-dish/{id}", [SideDishController::class, "delete"])->name("admin.side-dish.delete");
+});
+
+Route::prefix("client")->group(function () {
+    // Client home
+    Route::get("home", [HomeController::class, "home"])->name("client");
+    Route::get("menu", [HomeController::class, "menu"])->name("client.menu");
+    Route::get("detail/{id}", [HomeController::class, "detail"])->name("client.menu-detail");
 });

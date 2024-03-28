@@ -358,6 +358,4 @@ $(function () {
     $(".navbar-toggler").on("click", function () {
         $(".navbar-toggler").toggleClass("show");
     });
-
-
 });
